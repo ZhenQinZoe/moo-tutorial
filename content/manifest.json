@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Section 0: Overview",
+    "url": "https://hackmd.io/JCS3QSK1QfmUHhFVQFwnUQ",
+    "id": "JCS3QSK1QfmUHhFVQFwnUQ",
+    "slug": "overview",
+    "group": "chapters",
+    "sha256": "fe62b1ed62d499eee094d34202ae3cfe2898c95cc4deec4982e889585688834e",
+    "bytes": 17289
+  },
+  {
+    "title": "Section 1_ Foundations and Methods of Multi-Objective Optimization",
+    "url": "https://hackmd.io/RF9osbD2TL6h4xridDY0UQ",
+    "id": "RF9osbD2TL6h4xridDY0UQ",
+    "slug": "foundations",
+    "group": "chapters",
+    "sha256": "0cc4df3ea9874deb8498c4f9ce32133dbbac92a7f1fd693c01c9331fdec662da",
+    "bytes": 179187
+  },
+  {
+    "title": "Chapter 2: MOO Efficiency and Scalability",
+    "url": "https://hackmd.io/o2nwv0kPREWaAbSlOOUnsA",
+    "id": "o2nwv0kPREWaAbSlOOUnsA",
+    "slug": "efficiency",
+    "group": "chapters",
+    "sha256": "21b96f264749cc6ac66cad4709e5eb8c400ac5bc25da1538a327cd99934b97ed",
+    "bytes": 55565
+  },
+  {
+    "title": "Section 3: Distributed Multi-Objective Optimization",
+    "url": "https://hackmd.io/aDhgQys0SA63E3rZ_CK7Ng",
+    "id": "aDhgQys0SA63E3rZ_CK7Ng",
+    "slug": "distributed",
+    "group": "chapters",
+    "sha256": "eb25a071153035d887ae8aacc3fc0108e8e26136dd1cf80bfb204ccd645601c1",
+    "bytes": 44600
+  },
+  {
+    "title": "Section 4: Multi-Objective Bilevel Optimization (MOBO)",
+    "url": "https://hackmd.io/gz7RxaGBSn-jI52V9dE62g",
+    "id": "gz7RxaGBSn-jI52V9dE62g",
+    "slug": "bilevel",
+    "group": "chapters",
+    "sha256": "15b5d3934574e5326b530e090ccfa3515261e25e32ff5d564fe9d9be08c7330a",
+    "bytes": 24711
+  },
+  {
+    "title": "Chapter 5: Applications",
+    "url": "https://hackmd.io/DtLg7bhbStOcPZR_QhVyxQ",
+    "id": "DtLg7bhbStOcPZR_QhVyxQ",
+    "slug": "applications",
+    "group": "chapters",
+    "sha256": "826b0c5000392e1a28ee05fad1f8ea1539f25e3f62794f74a060a3398dd92dc7",
+    "bytes": 71488
+  },
+  {
+    "title": "Outline",
+    "url": "https://hackmd.io/4tkqAi01RrOMghD_L7vsNA",
+    "id": "4tkqAi01RrOMghD_L7vsNA",
+    "slug": "outline",
+    "group": "outline",
+    "sha256": "cd5145d59731a6b2eb6b5a481a3dec0e7603256a4a2dc06fad03ad617c4e9515",
+    "bytes": 920
+  },
+  {
+    "title": "Chapt01-MGDA-1 Introduction to MGDA: Gradient Descent for Multi-objective Optimization",
+    "url": "https://hackmd.io/ROaYhbMiQ3OzhgIWLNnL-w",
+    "id": "ROaYhbMiQ3OzhgIWLNnL-w",
+    "slug": "note-ROaYhbMiQ3OzhgIWLNnL-w",
+    "group": "notes",
+    "sha256": "6b62c21a09a432cea589f6240c6e79c546822640bffb3f813a54bae032968773",
+    "bytes": 15624
+  },
+  {
+    "title": "Chapt01-MGDA-2.md",
+    "url": "https://hackmd.io/-7csTYoOT_u_huiT6BlBIQ",
+    "id": "-7csTYoOT_u_huiT6BlBIQ",
+    "slug": "note--7csTYoOT_u_huiT6BlBIQ",
+    "group": "notes",
+    "sha256": "59f4879593b99ca38fc749526eac9793c25c6c27729595a24ba93a64f156463c",
+    "bytes": 33954
+  },
+  {
+    "title": "Chapt01-Scalarization.md",
+    "url": "https://hackmd.io/5p7f2RdeTbaB_CMgBnlPdg",
+    "id": "5p7f2RdeTbaB_CMgBnlPdg",
+    "slug": "note-5p7f2RdeTbaB_CMgBnlPdg",
+    "group": "notes",
+    "sha256": "7f58186133e3d760f343bcc6e621eb96808ecbf9937c0ecc55959d3655f12ec5",
+    "bytes": 25905
+  },
+  {
+    "title": "Intro MOO -- Benchmarks and Libraries.md",
+    "url": "https://hackmd.io/QFfUYH2cRgmttzlBuTu_Tg",
+    "id": "QFfUYH2cRgmttzlBuTu_Tg",
+    "slug": "note-QFfUYH2cRgmttzlBuTu_Tg",
+    "group": "notes",
+    "sha256": "0cd4a63620356d8aaa17fb2ec57aabaac432803b3a875898f4634fa596ccc86a",
+    "bytes": 20949
+  },
+  {
+    "title": "Intro MOO -- Gradient Manipulation.md",
+    "url": "https://hackmd.io/VcGURP0XQt6mkHBsXuPCRw",
+    "id": "VcGURP0XQt6mkHBsXuPCRw",
+    "slug": "note-VcGURP0XQt6mkHBsXuPCRw",
+    "group": "notes",
+    "sha256": "a606956553f01abccbbf34fb45e92c113dee0d70baa1e74b89b9aec36a5b91dd",
+    "bytes": 28478
+  },
+  {
+    "title": "Intro MOO -- Preference Guided MOO.md",
+    "url": "https://hackmd.io/2tFf4WZCSdGfz_gotR80Tw",
+    "id": "2tFf4WZCSdGfz_gotR80Tw",
+    "slug": "note-2tFf4WZCSdGfz_gotR80Tw",
+    "group": "notes",
+    "sha256": "7f3a989cd75faae2b58b60ca88fbe86990912baeaf89cb975b874f8955128717",
+    "bytes": 45972
+  },
+  {
+    "title": "Intro Multi-Objective Optimization.md",
+    "url": "https://hackmd.io/HFeLnvtnQ_asOv_shwU8_A",
+    "id": "HFeLnvtnQ_asOv_shwU8_A",
+    "slug": "note-HFeLnvtnQ_asOv_shwU8_A",
+    "group": "notes",
+    "sha256": "aa9aa67b96d5605ce9e0a52152f0898e48e7a7572c8c2f6e59166331c682feb0",
+    "bytes": 22318
+  },
+  {
+    "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity",
+    "url": "https://hackmd.io/2t5icYIbQNSuuxrgFBeLgQ",
+    "id": "2t5icYIbQNSuuxrgFBeLgQ",
+    "slug": "note-2t5icYIbQNSuuxrgFBeLgQ",
+    "group": "notes",
+    "sha256": "7e94b8d30d53db9475e3bed502781b8021bf513528076617ca13afa0d40797eb",
+    "bytes": 53191
+  },
+  {
+    "title": "Stochastic MGDA with Exact and Inexact Updates",
+    "url": "https://hackmd.io/G5i2O6U3TR67PEcyndCEcg",
+    "id": "G5i2O6U3TR67PEcyndCEcg",
+    "slug": "note-G5i2O6U3TR67PEcyndCEcg",
+    "group": "notes",
+    "sha256": "282119b6e814735cfc5788632dc45baf4affd01bae1f82376ed3a476b4f68614",
+    "bytes": 31650
+  }
+]

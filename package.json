@@ -1,0 +1,20 @@
+{
+  "name": "moo-tutorial",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "python3 -m http.server 4173 --directory dist"
+  },
+  "dependencies": {
+    "markdown-it": "14.1.0",
+    "markdown-it-container": "4.0.0",
+    "markdown-it-footnote": "4.0.0",
+    "markdown-it-mark": "4.0.0",
+    "markdown-it-sub": "2.0.0",
+    "markdown-it-sup": "2.0.0",
+    "mathjax": "3.2.2",
+    "mermaid": "10.9.3"
+  }
+}

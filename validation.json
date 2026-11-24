@@ -1,0 +1,176 @@
+{
+  "sourceFiles": [
+    {
+      "file": "content/JCS3QSK1QfmUHhFVQFwnUQ.md",
+      "sha256": "fe62b1ed62d499eee094d34202ae3cfe2898c95cc4deec4982e889585688834e",
+      "verified": true
+    },
+    {
+      "file": "content/RF9osbD2TL6h4xridDY0UQ.md",
+      "sha256": "0cc4df3ea9874deb8498c4f9ce32133dbbac92a7f1fd693c01c9331fdec662da",
+      "verified": true
+    },
+    {
+      "file": "content/o2nwv0kPREWaAbSlOOUnsA.md",
+      "sha256": "21b96f264749cc6ac66cad4709e5eb8c400ac5bc25da1538a327cd99934b97ed",
+      "verified": true
+    },
+    {
+      "file": "content/aDhgQys0SA63E3rZ_CK7Ng.md",
+      "sha256": "eb25a071153035d887ae8aacc3fc0108e8e26136dd1cf80bfb204ccd645601c1",
+      "verified": true
+    },
+    {
+      "file": "content/gz7RxaGBSn-jI52V9dE62g.md",
+      "sha256": "15b5d3934574e5326b530e090ccfa3515261e25e32ff5d564fe9d9be08c7330a",
+      "verified": true
+    },
+    {
+      "file": "content/DtLg7bhbStOcPZR_QhVyxQ.md",
+      "sha256": "826b0c5000392e1a28ee05fad1f8ea1539f25e3f62794f74a060a3398dd92dc7",
+      "verified": true
+    },
+    {
+      "file": "content/4tkqAi01RrOMghD_L7vsNA.md",
+      "sha256": "cd5145d59731a6b2eb6b5a481a3dec0e7603256a4a2dc06fad03ad617c4e9515",
+      "verified": true
+    },
+    {
+      "file": "content/ROaYhbMiQ3OzhgIWLNnL-w.md",
+      "sha256": "6b62c21a09a432cea589f6240c6e79c546822640bffb3f813a54bae032968773",
+      "verified": true
+    },
+    {
+      "file": "content/-7csTYoOT_u_huiT6BlBIQ.md",
+      "sha256": "59f4879593b99ca38fc749526eac9793c25c6c27729595a24ba93a64f156463c",
+      "verified": true
+    },
+    {
+      "file": "content/5p7f2RdeTbaB_CMgBnlPdg.md",
+      "sha256": "7f58186133e3d760f343bcc6e621eb96808ecbf9937c0ecc55959d3655f12ec5",
+      "verified": true
+    },
+    {
+      "file": "content/QFfUYH2cRgmttzlBuTu_Tg.md",
+      "sha256": "0cd4a63620356d8aaa17fb2ec57aabaac432803b3a875898f4634fa596ccc86a",
+      "verified": true
+    },
+    {
+      "file": "content/VcGURP0XQt6mkHBsXuPCRw.md",
+      "sha256": "a606956553f01abccbbf34fb45e92c113dee0d70baa1e74b89b9aec36a5b91dd",
+      "verified": true
+    },
+    {
+      "file": "content/2tFf4WZCSdGfz_gotR80Tw.md",
+      "sha256": "7f3a989cd75faae2b58b60ca88fbe86990912baeaf89cb975b874f8955128717",
+      "verified": true
+    },
+    {
+      "file": "content/HFeLnvtnQ_asOv_shwU8_A.md",
+      "sha256": "aa9aa67b96d5605ce9e0a52152f0898e48e7a7572c8c2f6e59166331c682feb0",
+      "verified": true
+    },
+    {
+      "file": "content/2t5icYIbQNSuuxrgFBeLgQ.md",
+      "sha256": "7e94b8d30d53db9475e3bed502781b8021bf513528076617ca13afa0d40797eb",
+      "verified": true
+    },
+    {
+      "file": "content/G5i2O6U3TR67PEcyndCEcg.md",
+      "sha256": "282119b6e814735cfc5788632dc45baf4affd01bae1f82376ed3a476b4f68614",
+      "verified": true
+    }
+  ],
+  "missingImages": [
+    {
+      "page": "note-VcGURP0XQt6mkHBsXuPCRw",
+      "source": "assets/gradient-methods-comparison-revised.png"
+    },
+    {
+      "page": "note-2t5icYIbQNSuuxrgFBeLgQ",
+      "source": "https://hackmd.io/_uploads/HJX9zpkCfe.png"
+    }
+  ],
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Chapter 0: Overview (Kevin)",
+      "headings": 2
+    },
+    {
+      "file": "foundations.html",
+      "title": "Section 1: Foundations and Methods of Multi-Objective Optimization",
+      "headings": 76
+    },
+    {
+      "file": "efficiency.html",
+      "title": "Chapter 2: MOO Efficiency and Scalability",
+      "headings": 39
+    },
+    {
+      "file": "distributed.html",
+      "title": "Chapter 3: Distributed Multi-Objective Optimization",
+      "headings": 36
+    },
+    {
+      "file": "bilevel.html",
+      "title": "4. Multi-Objective Bilevel Optimization",
+      "headings": 13
+    },
+    {
+      "file": "applications.html",
+      "title": "5. Applications",
+      "headings": 29
+    },
+    {
+      "file": "outline.html",
+      "title": "Multi-Objective Optimization Roadmap",
+      "headings": 21
+    },
+    {
+      "file": "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
+      "title": "Introduction to MGDA: Gradient Descent for Multi-objective Optimization",
+      "headings": 9
+    },
+    {
+      "file": "note--7csTYoOT_u_huiT6BlBIQ.html",
+      "title": "MGDA: Convergence Theory and Algorithmic Extensions",
+      "headings": 24
+    },
+    {
+      "file": "note-5p7f2RdeTbaB_CMgBnlPdg.html",
+      "title": "Scalarization Methods for Multi-objective Optimization: From Weighted Sums to Preference-Guided Solutions",
+      "headings": 17
+    },
+    {
+      "file": "note-QFfUYH2cRgmttzlBuTu_Tg.html",
+      "title": "Benchmarks and Libraries for Multi-Objective Optimization",
+      "headings": 6
+    },
+    {
+      "file": "note-VcGURP0XQt6mkHBsXuPCRw.html",
+      "title": "Gradient Weighting and Manipulation for Multi-Objective Optimization",
+      "headings": 9
+    },
+    {
+      "file": "note-2tFf4WZCSdGfz_gotR80Tw.html",
+      "title": "Preference-Guided Multi-Objective Optimization",
+      "headings": 14
+    },
+    {
+      "file": "note-HFeLnvtnQ_asOv_shwU8_A.html",
+      "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity",
+      "headings": 13
+    },
+    {
+      "file": "note-2t5icYIbQNSuuxrgFBeLgQ.html",
+      "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity",
+      "headings": 12
+    },
+    {
+      "file": "note-G5i2O6U3TR67PEcyndCEcg.html",
+      "title": "Stochastic MGDA with Exact and Inexact Direction Updates",
+      "headings": 11
+    }
+  ]
+}

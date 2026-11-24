@@ -1,0 +1,101 @@
+{
+  "https://hackmd.io/_uploads/BJYb0Dmy7x.png": {
+    "file": "BJYb0Dmy7x.png",
+    "source": "https://hackmd.io/_uploads/BJYb0Dmy7x.png"
+  },
+  "https://hackmd.io/_uploads/By2AnsBafg.svg": {
+    "file": "By2AnsBafg.svg",
+    "source": "https://hackmd.io/_uploads/By2AnsBafg.svg"
+  },
+  "https://hackmd.io/_uploads/ByhCniB6zl.svg": {
+    "file": "ByhCniB6zl.svg",
+    "source": "https://hackmd.io/_uploads/ByhCniB6zl.svg"
+  },
+  "https://hackmd.io/_uploads/H1Hz7fT3fe.png": {
+    "file": "H1Hz7fT3fe.png",
+    "source": "https://hackmd.io/_uploads/H1Hz7fT3fe.png"
+  },
+  "https://hackmd.io/_uploads/H1olUFkCMg.png": {
+    "file": "H1olUFkCMg.png",
+    "source": "https://hackmd.io/_uploads/H1olUFkCMg.png"
+  },
+  "https://hackmd.io/_uploads/HJX9zpkCfe.png": {
+    "error": "Command '['/usr/bin/curl', '-L', '--fail', '--silent', '--show-error', '--max-time', '35', 'https://hackmd.io/_uploads/HJX9zpkCfe.png']' returned non-zero exit status 56."
+  },
+  "https://hackmd.io/_uploads/HJyNmGphfg.png": {
+    "file": "HJyNmGphfg.png",
+    "source": "https://hackmd.io/_uploads/HJyNmGphfg.png"
+  },
+  "https://hackmd.io/_uploads/HkVHAvQ1Qg.png": {
+    "file": "HkVHAvQ1Qg.png",
+    "source": "https://hackmd.io/_uploads/HkVHAvQ1Qg.png"
+  },
+  "https://hackmd.io/_uploads/Hy2HyWypMg.png": {
+    "file": "Hy2HyWypMg.png",
+    "source": "https://hackmd.io/_uploads/Hy2HyWypMg.png"
+  },
+  "https://hackmd.io/_uploads/S1Iu7tUTfl.png": {
+    "file": "S1Iu7tUTfl.png",
+    "source": "https://hackmd.io/_uploads/S1Iu7tUTfl.png"
+  },
+  "https://hackmd.io/_uploads/S1c0h286Mx.png": {
+    "file": "S1c0h286Mx.png",
+    "source": "https://hackmd.io/_uploads/S1c0h286Mx.png"
+  },
+  "https://hackmd.io/_uploads/S1pH8FkRGg.png": {
+    "file": "S1pH8FkRGg.png",
+    "source": "https://hackmd.io/_uploads/S1pH8FkRGg.png"
+  },
+  "https://hackmd.io/_uploads/SJDe7Ga2zg.svg": {
+    "file": "SJDe7Ga2zg.svg",
+    "source": "https://hackmd.io/_uploads/SJDe7Ga2zg.svg"
+  },
+  "https://hackmd.io/_uploads/Syh0hsBpGe.svg": {
+    "file": "Syh0hsBpGe.svg",
+    "source": "https://hackmd.io/_uploads/Syh0hsBpGe.svg"
+  },
+  "https://hackmd.io/_uploads/Syn_0n86Gg.png": {
+    "file": "Syn_0n86Gg.png",
+    "source": "https://hackmd.io/_uploads/Syn_0n86Gg.png"
+  },
+  "https://hackmd.io/_uploads/r1b77f6hMg.png": {
+    "file": "r1b77f6hMg.png",
+    "source": "https://hackmd.io/_uploads/r1b77f6hMg.png"
+  },
+  "https://hackmd.io/_uploads/rJAkIKyRGx.png": {
+    "file": "rJAkIKyRGx.png",
+    "source": "https://hackmd.io/_uploads/rJAkIKyRGx.png"
+  },
+  "https://hackmd.io/_uploads/ry7AGzp2fe.png": {
+    "file": "ry7AGzp2fe.png",
+    "source": "https://hackmd.io/_uploads/ry7AGzp2fe.png"
+  },
+  "https://hackmd.io/_uploads/ryXP0DXkQg.png": {
+    "file": "ryXP0DXkQg.png",
+    "source": "https://hackmd.io/_uploads/ryXP0DXkQg.png"
+  },
+  "https://hackmd.io/_uploads/ryddyWJazl.png": {
+    "file": "ryddyWJazl.png",
+    "source": "https://hackmd.io/_uploads/ryddyWJazl.png"
+  },
+  "assets/mgda-direction.png": {
+    "file": "HkVHAvQ1Qg.png",
+    "source": "https://hackmd.io/_uploads/HkVHAvQ1Qg.png",
+    "note": "Matched to the original uploaded figure by the same caption, example, and surrounding section in the consolidated source."
+  },
+  "assets/classical-constrained-moo.png": {
+    "file": "BJYb0Dmy7x.png",
+    "source": "https://hackmd.io/_uploads/BJYb0Dmy7x.png",
+    "note": "Matched to the original uploaded figure by the same caption, example, and surrounding section in the consolidated source."
+  },
+  "Section_1/assets/classical-constrained-moo.png": {
+    "file": "BJYb0Dmy7x.png",
+    "source": "https://hackmd.io/_uploads/BJYb0Dmy7x.png",
+    "note": "Matched to the original uploaded figure by the same caption, example, and surrounding section in the consolidated source."
+  },
+  "assets/gradient-methods-comparison-revised.png": {
+    "url": "https://hackmd.io/_uploads/HJX9zpkCfe.png",
+    "source": "https://hackmd.io/_uploads/HJX9zpkCfe.png",
+    "note": "Same exact descriptive alt text and Figure 2 caption in the separate introduction note. Kept at the original remote URL because its download was unavailable."
+  }
+}

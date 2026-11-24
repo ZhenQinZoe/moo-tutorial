@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="744" viewBox="0 0 1200 744" role="img" aria-labelledby="title desc">
+<title id="title">Three ways to organize multilingual speech objectives</title><desc id="desc">VS-MSP balances automatic speech recognition, speech-to-text translation, and acoustic gradients together. VC-MSP balances supervised gradients and adds a separate acoustic penalty. VM-MSP balances recognition and translation separately. The USA hierarchy places recognition at the upper level, translation at the middle level, and acoustic learning at the lower level, with separate translation and acoustic penalties. All contributions enter one shared encoder update.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#606060"/></marker></defs>
+<rect width="1200" height="744" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#4E4E4E" stroke-linejoin="round" stroke-linecap="round">
+<path d="M400,22 L400,682" stroke="#D6D6D2" stroke-width="1.5"/>
+<path d="M800,22 L800,682" stroke="#D6D6D2" stroke-width="1.5"/>
+<text x="200" y="42" text-anchor="middle" font-size="26" font-weight="600" fill="#4E4E4E">(a) VS-MSP</text>
+<text x="200" y="74" text-anchor="middle" font-size="18" font-weight="400" fill="#686868">One balancing problem</text>
+<rect x="24" y="113" width="108" height="80" rx="10" fill="#FCE6CD" stroke="#606060" stroke-width="2"/>
+<text x="78.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ASR</text>
+<text x="78.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="146" y="113" width="108" height="80" rx="10" fill="#FFF2C8" stroke="#606060" stroke-width="2"/>
+<text x="200.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ST</text>
+<text x="200.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="268" y="113" width="108" height="80" rx="10" fill="#DDEAD5" stroke="#606060" stroke-width="2"/>
+<text x="322.0" y="146.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">Acoustic</text>
+<text x="322.0" y="172.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">loss</text>
+<rect x="94" y="588" width="212" height="82" rx="10" fill="#D8E5EC" stroke="#606060" stroke-width="2"/>
+<text x="200.0" y="622.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">Shared encoder</text>
+<text x="200.0" y="650.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">update</text>
+<text x="600" y="42" text-anchor="middle" font-size="26" font-weight="600" fill="#4E4E4E">(b) VC-MSP</text>
+<text x="600" y="74" text-anchor="middle" font-size="18" font-weight="400" fill="#686868">A separate acoustic penalty</text>
+<rect x="424" y="113" width="108" height="80" rx="10" fill="#FCE6CD" stroke="#606060" stroke-width="2"/>
+<text x="478.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ASR</text>
+<text x="478.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="546" y="113" width="108" height="80" rx="10" fill="#FFF2C8" stroke="#606060" stroke-width="2"/>
+<text x="600.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ST</text>
+<text x="600.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="668" y="113" width="108" height="80" rx="10" fill="#DDEAD5" stroke="#606060" stroke-width="2"/>
+<text x="722.0" y="146.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">Acoustic</text>
+<text x="722.0" y="172.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">loss</text>
+<rect x="494" y="588" width="212" height="82" rx="10" fill="#D8E5EC" stroke="#606060" stroke-width="2"/>
+<text x="600.0" y="622.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">Shared encoder</text>
+<text x="600.0" y="650.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">update</text>
+<text x="1000" y="42" text-anchor="middle" font-size="26" font-weight="600" fill="#4E4E4E">(c) VM-MSP: USA</text>
+<text x="1000" y="74" text-anchor="middle" font-size="18" font-weight="400" fill="#686868">Separate supervised groups</text>
+<rect x="824" y="113" width="108" height="80" rx="10" fill="#FCE6CD" stroke="#606060" stroke-width="2"/>
+<text x="878.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ASR</text>
+<text x="878.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="946" y="113" width="108" height="80" rx="10" fill="#FFF2C8" stroke="#606060" stroke-width="2"/>
+<text x="1000.0" y="147.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ST</text>
+<text x="1000.0" y="173.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">losses</text>
+<rect x="1068" y="113" width="108" height="80" rx="10" fill="#DDEAD5" stroke="#606060" stroke-width="2"/>
+<text x="1122.0" y="146.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">Acoustic</text>
+<text x="1122.0" y="172.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">loss</text>
+<rect x="894" y="588" width="212" height="82" rx="10" fill="#D8E5EC" stroke="#606060" stroke-width="2"/>
+<text x="1000.0" y="622.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">Shared encoder</text>
+<text x="1000.0" y="650.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">update</text>
+<rect x="48" y="290" width="300" height="90" rx="10" fill="#F5F5F3" stroke="#606060" stroke-width="2"/>
+<text x="198.0" y="342.48" text-anchor="middle" font-size="22" font-weight="600" fill="#4E4E4E">Balance all gradients</text>
+<path d="M78,193 L78,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M200,193 L200,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M322,193 L322,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M200,380 L200,588" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<rect x="432" y="290" width="228" height="90" rx="10" fill="#F5F5F3" stroke="#606060" stroke-width="2"/>
+<text x="546.0" y="328.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">Balance supervised</text>
+<text x="546.0" y="356.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">gradients</text>
+<rect x="674" y="290" width="112" height="90" rx="10" fill="#DDEAD5" stroke="#606060" stroke-width="2"/>
+<text x="730.0" y="327.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">Acoustic</text>
+<text x="730.0" y="355.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">penalty</text>
+<path d="M478,193 L478,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M600,193 L600,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M722,193 L730,193 L730,290" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M546,380 L546,540 L579,540" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M730,380 L730,540 L621,540" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<circle cx="600" cy="540" r="21" fill="white" stroke="#606060" stroke-width="2"/>
+<text x="600" y="549" text-anchor="middle" font-size="32" font-weight="400" fill="#4E4E4E">+</text>
+<path d="M600,561 L600,588" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="878" y="222" text-anchor="middle" font-size="17" font-weight="400" fill="#686868">Upper</text>
+<text x="1000" y="222" text-anchor="middle" font-size="17" font-weight="400" fill="#686868">Middle</text>
+<text x="1122" y="222" text-anchor="middle" font-size="17" font-weight="400" fill="#686868">Lower</text>
+<rect x="824" y="250" width="108" height="90" rx="10" fill="#F5F5F3" stroke="#606060" stroke-width="2"/>
+<text x="878.0" y="288.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">Balance</text>
+<text x="878.0" y="316.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ASR</text>
+<rect x="946" y="250" width="108" height="90" rx="10" fill="#F5F5F3" stroke="#606060" stroke-width="2"/>
+<text x="1000.0" y="288.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">Balance</text>
+<text x="1000.0" y="316.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ST</text>
+<rect x="946" y="382" width="108" height="80" rx="10" fill="#FFF2C8" stroke="#606060" stroke-width="2"/>
+<text x="1000.0" y="415.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">ST</text>
+<text x="1000.0" y="443.14" text-anchor="middle" font-size="21" font-weight="600" fill="#4E4E4E">penalty</text>
+<rect x="1068" y="382" width="108" height="80" rx="10" fill="#DDEAD5" stroke="#606060" stroke-width="2"/>
+<text x="1122.0" y="414.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">Acoustic</text>
+<text x="1122.0" y="442.46" text-anchor="middle" font-size="19" font-weight="600" fill="#4E4E4E">penalty</text>
+<path d="M878,193 L878,202" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M878,232 L878,250" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M1000,193 L1000,202" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M1000,232 L1000,250" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M1122,193 L1122,202" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M1122,232 L1122,382" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M1000,340 L1000,382" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M878,340 L878,540 L979,540" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M1000,462 L1000,519" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M1122,462 L1122,540 L1021,540" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<circle cx="1000" cy="540" r="21" fill="white" stroke="#606060" stroke-width="2"/>
+<text x="1000" y="549" text-anchor="middle" font-size="32" font-weight="400" fill="#4E4E4E">+</text>
+<path d="M1000,561 L1000,588" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<path d="M30,714 L95,714" fill="none" stroke="#606060" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="110" y="720" text-anchor="start" font-size="18" font-weight="400" fill="#4E4E4E">Gradient contributions to a coupled encoder update</text>
+<text x="1174" y="720" text-anchor="end" font-size="18" font-weight="400" fill="#686868">ASR: recognition; ST: speech-to-text translation</text>
+</g></svg>

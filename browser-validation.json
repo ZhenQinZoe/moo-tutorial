@@ -1,0 +1,130 @@
+[
+  {
+    "file": "index.html",
+    "diagrams": 0,
+    "math": 4,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Chapter 0: Overview (Kevin) | MOO Tutorial"
+  },
+  {
+    "file": "foundations.html",
+    "diagrams": 2,
+    "math": 842,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Section 1: Foundations and Methods of Multi-Objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "efficiency.html",
+    "diagrams": 0,
+    "math": 394,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Chapter 2: MOO Efficiency and Scalability | MOO Tutorial"
+  },
+  {
+    "file": "distributed.html",
+    "diagrams": 0,
+    "math": 226,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Chapter 3: Distributed Multi-Objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "bilevel.html",
+    "diagrams": 0,
+    "math": 55,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "4. Multi-Objective Bilevel Optimization | MOO Tutorial"
+  },
+  {
+    "file": "applications.html",
+    "diagrams": 0,
+    "math": 180,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "5. Applications | MOO Tutorial"
+  },
+  {
+    "file": "outline.html",
+    "diagrams": 0,
+    "math": 0,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Multi-Objective Optimization Roadmap | MOO Tutorial"
+  },
+  {
+    "file": "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
+    "diagrams": 0,
+    "math": 137,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Introduction to MGDA: Gradient Descent for Multi-objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "note--7csTYoOT_u_huiT6BlBIQ.html",
+    "diagrams": 0,
+    "math": 173,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "MGDA: Convergence Theory and Algorithmic Extensions | MOO Tutorial"
+  },
+  {
+    "file": "note-5p7f2RdeTbaB_CMgBnlPdg.html",
+    "diagrams": 0,
+    "math": 140,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Scalarization Methods for Multi-objective Optimization: From Weighted Sums to Preference-Guided Solutions | MOO Tutorial"
+  },
+  {
+    "file": "note-QFfUYH2cRgmttzlBuTu_Tg.html",
+    "diagrams": 0,
+    "math": 38,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Benchmarks and Libraries for Multi-Objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "note-VcGURP0XQt6mkHBsXuPCRw.html",
+    "diagrams": 1,
+    "math": 110,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Gradient Weighting and Manipulation for Multi-Objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "note-2tFf4WZCSdGfz_gotR80Tw.html",
+    "diagrams": 0,
+    "math": 144,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Preference-Guided Multi-Objective Optimization | MOO Tutorial"
+  },
+  {
+    "file": "note-HFeLnvtnQ_asOv_shwU8_A.html",
+    "diagrams": 1,
+    "math": 149,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity | MOO Tutorial"
+  },
+  {
+    "file": "note-2t5icYIbQNSuuxrgFBeLgQ.html",
+    "diagrams": 1,
+    "math": 260,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity | MOO Tutorial"
+  },
+  {
+    "file": "note-G5i2O6U3TR67PEcyndCEcg.html",
+    "diagrams": 0,
+    "math": 275,
+    "mathErrors": 0,
+    "overflow": false,
+    "title": "Stochastic MGDA with Exact and Inexact Direction Updates | MOO Tutorial"
+  }
+]
