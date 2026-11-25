@@ -21,11 +21,26 @@
   $('.mobile-backdrop').addEventListener('click',()=>setMenu(false));
   $$('#sidebar a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
   $$('.article table').forEach(t=>{const w=document.createElement('div');w.className='table-wrap';w.tabIndex=0;w.setAttribute('role','region');w.setAttribute('aria-label','Scrollable table');t.before(w);w.append(t)});
-  const labelScrollableMath=()=>$$('.tex,.math-block').forEach(el=>{
-    const overflow=el.scrollWidth>el.clientWidth+1;
-    if(overflow){el.tabIndex=0;el.setAttribute('role','region');el.setAttribute('aria-label','Scrollable equation');}
-    else {el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');}
-  });
+  const labelScrollableMath=()=>{
+    // Keep inline formulas in the text flow, even on narrow screens.
+    const inline=$$('.tex:not(.display-tex)');
+    inline.forEach(el=>el.style.removeProperty('font-size'));
+    const sizes=inline.map(el=>{
+      let parent=el.parentElement;
+      while(parent&&(!parent.clientWidth||['inline','contents'].includes(getComputedStyle(parent).display)))parent=parent.parentElement;
+      if(!parent)return null;
+      const style=getComputedStyle(parent);
+      const available=parent.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight);
+      const width=el.getBoundingClientRect().width;
+      return available>0&&width>available+1?100*available/width:null;
+    });
+    inline.forEach((el,i)=>{if(sizes[i])el.style.fontSize=`${sizes[i]}%`});
+    $$('.display-tex,.math-block').forEach(el=>{
+      const overflow=el.scrollWidth>el.clientWidth+1;
+      if(overflow){el.tabIndex=0;el.setAttribute('role','region');el.setAttribute('aria-label','Scrollable equation');}
+      else {el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');}
+    });
+  };
   window.addEventListener('math-ready',labelScrollableMath);
   window.addEventListener('resize',labelScrollableMath);
   if(document.documentElement.dataset.mathReady)labelScrollableMath();

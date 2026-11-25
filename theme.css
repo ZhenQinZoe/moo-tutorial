@@ -17,10 +17,10 @@
 .inline-toc>summary:focus-visible{outline:3px solid #43a8a3;outline-offset:5px}
 .inline-toc[open]>summary{padding-bottom:.8rem;margin-bottom:.8rem;border-bottom:1px solid var(--line)}
 .inline-toc[open] .toc-expand,.inline-toc:not([open]) .toc-collapse{display:none}
-/* Overflow belongs to the equation or table, not the entire page. */
+/* Inline math flows with prose; only display equations and tables scroll. */
 .main,.article,.callout{min-width:0}
-.tex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle}
-.display-tex{display:block}
+.tex{display:inline;overflow:visible;vertical-align:baseline}
+.display-tex{display:block;overflow-x:auto;overflow-y:hidden}
 .math-block,.display-tex,.table-wrap,.article pre{max-width:100%;overscroll-behavior-x:contain}
 .math-block>mjx-container[jax=CHTML][display=true],.display-tex>mjx-container[jax=CHTML][display=true]{min-width:min-content}
 .mobile-header button{flex-shrink:0}
