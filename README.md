@@ -1,4 +1,4 @@
-# MOO Tutorial
+# Multi-Objective Optimization Tutorial
 
 A self-contained static tutorial website prepared from the supplied HackMD workspace. The site can be previewed locally or published with the included GitHub Pages workflow.
 
@@ -16,9 +16,13 @@ Then open `http://localhost:4173`.
 
 ## Content preservation
 
-`content/` contains the 16 original Markdown notes, copied without rewriting. The manifest records each source URL and SHA-256 checksum. Every build verifies these checksums before rendering. Original wording, equations, author annotations, references, and existing placeholders are retained. Navigation, styles, math typesetting, and local copies of image assets are presentation changes only.
+`content/` contains the 16 original Markdown notes, copied without rewriting. The manifest records each source URL and SHA-256 checksum. Every build verifies these checksums before rendering. Original wording, equations, author annotations, and existing placeholders are retained. Each source `[TOC]` displays all subsection headings in their original order, without repeating the page title. At the user’s request, “(Kevin)” is removed from displayed headings; the source files remain unchanged.
 
-Six main chapters are in the primary navigation. The roadmap is under **Outline**, and the nine separately stored foundation notes remain accessible under **Foundation notes**. The default HackMD team welcome note is service boilerplate and is not part of the tutorial.
+At the user's request, local Reference/References headings and blocks are removed from display, with all works collected on one deduplicated **References** page. `references/verified.json` records 185 distinct works, their verified metadata, original publication links, evidence, and version differences. Nine papers cited in the body but absent from the original bibliography have been added to this shared list. The MGDA-FA placeholder is mapped to its actual paper, already cited elsewhere. At the user’s request, sentence-initial narrative citations retain author wording (for example, Ye et al. [165]); other author/year labels become numeric citations, and parentheses around citation-only groups are removed. Method names and pinpoint references are retained. Clickable in-body citations use globally consistent English square-bracket numbers such as [1], and the shared list is numbered 1–185. Existing local numbers are remapped to the same shared numbering without duplicate adjacent markers; reference titles link to original source pages. CLEAR's unidentified “OUR PREPRINT” has a red **TODO**, as requested, with no invented authors or URL.
+
+`references/AUDIT.md` documents the bibliographic check and its limitations. This is an existence/metadata check, not a scientific claim-by-claim or proof audit. `references/site-validation.json` records the source checksums and interface/link checks. Earlier browser checks are retained as historical validation; the latest citation-display check is `references/narrative-citation-validation.json`; the section/navigation check is `references/numbered-ui-validation.json`.
+
+The primary navigation uses Chapter 0–5, followed by the standalone, unnumbered **References** section immediately after Chapter 5: Applications. The site name is **Multi-Objective Optimization Tutorial**. Outline, Foundation notes, View source, and HackMD footer controls are removed from the interface. Auxiliary source pages remain available for existing internal links but are not promoted in navigation or search. References use a compact numbered list with one original-paper link per entry. The default HackMD team welcome note is service boilerplate and is not part of the tutorial.
 
 ## Sharing
 
@@ -41,3 +45,9 @@ Third-party libraries retain their packaged licensing information in `node_modul
 ## GitHub Pages
 
 The workflow in `.github/workflows/pages.yml` verifies the source checksums, builds the site, and publishes it from `dist/`. In the repository settings, set **Pages → Source → GitHub Actions**. The website is independent of the account’s personal homepage.
+
+## Reading and rendering
+
+Chapter titles consistently use Chapter 0–5. Complete inline contents are expanded by default and can be collapsed with a keyboard-accessible native control. Bare LaTeX equation environments are preserved before Markdown parsing. Long formulas and tables scroll inside their own containers on small screens; overflowing formulas are keyboard-focusable.
+
+`references/reading-validation.json` and `references/reading-browser-validation.json` record the latest checks: all 2,842 math expressions compiled without errors, all original source checksums matched, complete contents and citation targets were preserved, and the tested mobile/desktop pages had no horizontal page overflow.

@@ -1,6 +1,11 @@
 (() => {
   const $ = s => document.querySelector(s);
   const $$ = s => [...document.querySelectorAll(s)];
+  const followOldReference = () => {
+    const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if(target?.dataset.referenceTarget)location.replace(target.dataset.referenceTarget);
+  };
+  followOldReference(); window.addEventListener('hashchange',followOldReference);
   const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   $$('.expand').forEach(button=>button.addEventListener('click',()=>{
     const open=button.getAttribute('aria-expanded')!=='true';
@@ -16,6 +21,14 @@
   $('.mobile-backdrop').addEventListener('click',()=>setMenu(false));
   $$('#sidebar a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
   $$('.article table').forEach(t=>{const w=document.createElement('div');w.className='table-wrap';w.tabIndex=0;w.setAttribute('role','region');w.setAttribute('aria-label','Scrollable table');t.before(w);w.append(t)});
+  const labelScrollableMath=()=>$$('.tex,.math-block').forEach(el=>{
+    const overflow=el.scrollWidth>el.clientWidth+1;
+    if(overflow){el.tabIndex=0;el.setAttribute('role','region');el.setAttribute('aria-label','Scrollable equation');}
+    else {el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');}
+  });
+  window.addEventListener('math-ready',labelScrollableMath);
+  window.addEventListener('resize',labelScrollableMath);
+  if(document.documentElement.dataset.mathReady)labelScrollableMath();
   const viewer=$('#image-viewer'); let lastImage=null;
   function closeImage(){viewer.hidden=true;document.body.classList.remove('image-open');lastImage?.focus();}
   $$('.article img').forEach(img=>{

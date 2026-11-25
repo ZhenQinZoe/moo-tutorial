@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-24",
+  "preview": "http://127.0.0.1:4173/efficiency.html",
+  "toc": {
+    "efficiencyHeadings": 39,
+    "entries": 39,
+    "contains211": true,
+    "contains212": true,
+    "anchorNavigationVerified": true
+  },
+  "referenceLinks": {
+    "bodyToReference": "references.html#r004",
+    "externalPageOpened": "https://arxiv.org/abs/2412.10961",
+    "externalTitle": "PSMGD: Periodic Stochastic Multi-Gradient Descent for Fast Multi-Objective Optimization"
+  },
+  "references": {
+    "entries": 185,
+    "PSMGDSearchResults": 1,
+    "CLEARSearchResults": "0 references \u00b7 1 TODO"
+  },
+  "CLEAR": {
+    "text": "TODO",
+    "color": "rgb(189, 37, 37)",
+    "href": "references.html#clear-todo",
+    "navigationVerified": true
+  },
+  "applicationsMath": {
+    "ready": true,
+    "renderedExpressions": 180,
+    "errors": 0
+  },
+  "previewHorizontalOverflow": false,
+  "screenshots": [
+    "../moo-tutorial-complete-toc.jpg",
+    "../moo-tutorial-references-preview.jpg",
+    "../moo-tutorial-clear-todo.jpg"
+  ]
+}

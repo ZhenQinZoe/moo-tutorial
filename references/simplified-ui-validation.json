@@ -1,0 +1,20 @@
+{
+  "requestedChanges": [
+    "Remove (Kevin) from displayed headings",
+    "Remove source controls, Outline, Foundation notes, HackMD source, and sidebar tagline",
+    "Use a compact bulleted References list",
+    "Remove repeated page title from each inline contents list",
+    "Place References immediately after Applications in CONTENTS"
+  ],
+  "sourceFilesUnchanged": 16,
+  "pagesChecked": 17,
+  "references": 185,
+  "referenceSourceLinks": 185,
+  "chapter2ContentsEntries": 38,
+  "chapter2FirstContentsEntry": "Roadmap",
+  "allInternalPageAnchorsValid": true,
+  "sampledArticleTextUnchangedExceptKevin": [
+    "index.html",
+    "efficiency.html"
+  ]
+}

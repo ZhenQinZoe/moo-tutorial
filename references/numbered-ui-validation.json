@@ -1,0 +1,38 @@
+{
+  "pages": 17,
+  "sourceChecksumsVerified": 16,
+  "numberedReferences": 185,
+  "numberedCitationLinks": 785,
+  "allInternalHTMLAnchorsValid": true,
+  "prosePreservedExceptAuthorizedDisplayChanges": [
+    "efficiency.html",
+    "index.html",
+    "applications.html",
+    "note-VcGURP0XQt6mkHBsXuPCRw.html",
+    "note-2tFf4WZCSdGfz_gotR80Tw.html",
+    "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
+    "foundations.html",
+    "bilevel.html",
+    "distributed.html",
+    "outline.html",
+    "note-HFeLnvtnQ_asOv_shwU8_A.html",
+    "note-G5i2O6U3TR67PEcyndCEcg.html",
+    "note-2t5icYIbQNSuuxrgFBeLgQ.html",
+    "note-QFfUYH2cRgmttzlBuTu_Tg.html",
+    "note-5p7f2RdeTbaB_CMgBnlPdg.html",
+    "note--7csTYoOT_u_huiT6BlBIQ.html"
+  ],
+  "chapter2ContentsEntries": 37,
+  "chapter2FirstEntry": "Roadmap",
+  "fullSiteName": "Multi-Objective Optimization Tutorial",
+  "navigation": [
+    "Section 0: Overview",
+    "Section 1: Foundations and Methods of Multi-Objective Optimization",
+    "Section 2: MOO Efficiency and Scalability",
+    "Section 3: Distributed Multi-Objective Optimization",
+    "Section 4: Multi-Objective Bilevel Optimization",
+    "Section 5: Applications",
+    "References"
+  ],
+  "localReferenceHeadingsRemoved": true
+}

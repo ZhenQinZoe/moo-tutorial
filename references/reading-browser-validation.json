@@ -1,0 +1,174 @@
+[
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 4,
+    "page": "overview",
+    "tocLinks": 0,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 1
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 841,
+    "page": "foundations",
+    "tocLinks": 74,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 168
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 394,
+    "page": "efficiency",
+    "tocLinks": 37,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 33
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 226,
+    "page": "distributed",
+    "tocLinks": 34,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 19
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 180,
+    "page": "applications",
+    "tocLinks": 24,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 26
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 0,
+    "page": "references",
+    "tocLinks": 0,
+    "unrendered": 0,
+    "viewport": 390,
+    "wideMath": 0
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 0,
+    "page": "outline",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 127,
+    "page": "note-ROaYhbMiQ3OzhgIWLNnL-w",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 136,
+    "page": "note--7csTYoOT_u_huiT6BlBIQ",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 140,
+    "page": "note-5p7f2RdeTbaB_CMgBnlPdg",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 7,
+    "page": "note-QFfUYH2cRgmttzlBuTu_Tg",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 70,
+    "page": "note-VcGURP0XQt6mkHBsXuPCRw",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 76,
+    "page": "note-2tFf4WZCSdGfz_gotR80Tw",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 131,
+    "page": "note-HFeLnvtnQ_asOv_shwU8_A",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 203,
+    "page": "note-2t5icYIbQNSuuxrgFBeLgQ",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 375,
+    "errors": 0,
+    "math": 250,
+    "page": "note-G5i2O6U3TR67PEcyndCEcg",
+    "unrendered": 0,
+    "viewport": 390
+  },
+  {
+    "bodyWidth": 305,
+    "errors": 0,
+    "math": 841,
+    "page": "foundations",
+    "unrendered": 0,
+    "viewport": 320
+  },
+  {
+    "bodyWidth": 305,
+    "errors": 0,
+    "math": 57,
+    "page": "bilevel",
+    "unrendered": 0,
+    "viewport": 320
+  },
+  {
+    "bodyWidth": 1265,
+    "errors": 0,
+    "math": 841,
+    "page": "foundations",
+    "unrendered": 0,
+    "viewport": 1280
+  },
+  {
+    "bodyWidth": 1265,
+    "errors": 0,
+    "math": 57,
+    "page": "bilevel",
+    "unrendered": 0,
+    "viewport": 1280
+  }
+]

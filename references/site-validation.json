@@ -1,0 +1,81 @@
+{
+  "sourceChecksums": [
+    "overview",
+    "foundations",
+    "efficiency",
+    "distributed",
+    "bilevel",
+    "applications",
+    "outline",
+    "note-ROaYhbMiQ3OzhgIWLNnL-w",
+    "note--7csTYoOT_u_huiT6BlBIQ",
+    "note-5p7f2RdeTbaB_CMgBnlPdg",
+    "note-QFfUYH2cRgmttzlBuTu_Tg",
+    "note-VcGURP0XQt6mkHBsXuPCRw",
+    "note-2tFf4WZCSdGfz_gotR80Tw",
+    "note-HFeLnvtnQ_asOv_shwU8_A",
+    "note-2t5icYIbQNSuuxrgFBeLgQ",
+    "note-G5i2O6U3TR67PEcyndCEcg"
+  ],
+  "unchangedSidebars": [
+    "index.html",
+    "foundations.html",
+    "efficiency.html",
+    "distributed.html",
+    "bilevel.html",
+    "applications.html",
+    "outline.html",
+    "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
+    "note--7csTYoOT_u_huiT6BlBIQ.html",
+    "note-5p7f2RdeTbaB_CMgBnlPdg.html",
+    "note-QFfUYH2cRgmttzlBuTu_Tg.html",
+    "note-VcGURP0XQt6mkHBsXuPCRw.html",
+    "note-2tFf4WZCSdGfz_gotR80Tw.html",
+    "note-HFeLnvtnQ_asOv_shwU8_A.html",
+    "note-2t5icYIbQNSuuxrgFBeLgQ.html",
+    "note-G5i2O6U3TR67PEcyndCEcg.html"
+  ],
+  "unchangedBodies": [
+    "index.html",
+    "foundations.html",
+    "efficiency.html",
+    "distributed.html",
+    "bilevel.html",
+    "applications.html",
+    "outline.html",
+    "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
+    "note--7csTYoOT_u_huiT6BlBIQ.html",
+    "note-5p7f2RdeTbaB_CMgBnlPdg.html",
+    "note-QFfUYH2cRgmttzlBuTu_Tg.html",
+    "note-VcGURP0XQt6mkHBsXuPCRw.html",
+    "note-2tFf4WZCSdGfz_gotR80Tw.html",
+    "note-HFeLnvtnQ_asOv_shwU8_A.html",
+    "note-2t5icYIbQNSuuxrgFBeLgQ.html",
+    "note-G5i2O6U3TR67PEcyndCEcg.html"
+  ],
+  "completeContents": [
+    {
+      "page": "foundations.html",
+      "headings": 76
+    },
+    {
+      "page": "efficiency.html",
+      "headings": 39
+    },
+    {
+      "page": "distributed.html",
+      "headings": 36
+    },
+    {
+      "page": "bilevel.html",
+      "headings": 13
+    },
+    {
+      "page": "applications.html",
+      "headings": 29
+    }
+  ],
+  "brokenInternalLinks": [],
+  "referenceEntries": 185,
+  "citationLinks": 1216
+}

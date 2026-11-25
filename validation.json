@@ -94,33 +94,33 @@
   "pages": [
     {
       "file": "index.html",
-      "title": "Chapter 0: Overview (Kevin)",
-      "headings": 2
+      "title": "Chapter 0: Overview",
+      "headings": 1
     },
     {
       "file": "foundations.html",
-      "title": "Section 1: Foundations and Methods of Multi-Objective Optimization",
-      "headings": 76
+      "title": "Chapter 1: Foundations and Methods of Multi-Objective Optimization",
+      "headings": 75
     },
     {
       "file": "efficiency.html",
       "title": "Chapter 2: MOO Efficiency and Scalability",
-      "headings": 39
+      "headings": 38
     },
     {
       "file": "distributed.html",
       "title": "Chapter 3: Distributed Multi-Objective Optimization",
-      "headings": 36
+      "headings": 35
     },
     {
       "file": "bilevel.html",
-      "title": "4. Multi-Objective Bilevel Optimization",
-      "headings": 13
+      "title": "Chapter 4: Multi-Objective Bilevel Optimization",
+      "headings": 11
     },
     {
       "file": "applications.html",
-      "title": "5. Applications",
-      "headings": 29
+      "title": "Chapter 5: Applications",
+      "headings": 25
     },
     {
       "file": "outline.html",
@@ -130,47 +130,57 @@
     {
       "file": "note-ROaYhbMiQ3OzhgIWLNnL-w.html",
       "title": "Introduction to MGDA: Gradient Descent for Multi-objective Optimization",
-      "headings": 9
+      "headings": 8
     },
     {
       "file": "note--7csTYoOT_u_huiT6BlBIQ.html",
       "title": "MGDA: Convergence Theory and Algorithmic Extensions",
-      "headings": 24
+      "headings": 23
     },
     {
       "file": "note-5p7f2RdeTbaB_CMgBnlPdg.html",
       "title": "Scalarization Methods for Multi-objective Optimization: From Weighted Sums to Preference-Guided Solutions",
-      "headings": 17
+      "headings": 16
     },
     {
       "file": "note-QFfUYH2cRgmttzlBuTu_Tg.html",
       "title": "Benchmarks and Libraries for Multi-Objective Optimization",
-      "headings": 6
+      "headings": 5
     },
     {
       "file": "note-VcGURP0XQt6mkHBsXuPCRw.html",
       "title": "Gradient Weighting and Manipulation for Multi-Objective Optimization",
-      "headings": 9
+      "headings": 8
     },
     {
       "file": "note-2tFf4WZCSdGfz_gotR80Tw.html",
       "title": "Preference-Guided Multi-Objective Optimization",
-      "headings": 14
+      "headings": 13
     },
     {
       "file": "note-HFeLnvtnQ_asOv_shwU8_A.html",
       "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity",
-      "headings": 13
+      "headings": 12
     },
     {
       "file": "note-2t5icYIbQNSuuxrgFBeLgQ.html",
       "title": "Introduction to Multi-objective Optimization: Pareto Optimality and Stationarity",
-      "headings": 12
+      "headings": 11
     },
     {
       "file": "note-G5i2O6U3TR67PEcyndCEcg.html",
       "title": "Stochastic MGDA with Exact and Inexact Direction Updates",
-      "headings": 11
+      "headings": 10
+    },
+    {
+      "file": "references.html",
+      "title": "References",
+      "headings": 1
     }
-  ]
+  ],
+  "references": {
+    "unique": 185,
+    "sourceEntries": 435,
+    "linkedCitations": 1227
+  }
 }

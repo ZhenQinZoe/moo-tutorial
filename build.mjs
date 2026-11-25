@@ -7,12 +7,14 @@ import mark from 'markdown-it-mark';
 import sub from 'markdown-it-sub';
 import sup from 'markdown-it-sup';
 import container from 'markdown-it-container';
+import {loadReferences} from './references.mjs';
 
 const root = path.dirname(new URL(import.meta.url).pathname);
 const out = path.join(root, 'dist');
 const notes = JSON.parse(await fs.readFile(path.join(root, 'content/manifest.json'), 'utf8'));
 const assets = JSON.parse(await fs.readFile(path.join(root, 'assets/manifest.json'), 'utf8').catch(() => '{}'));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const references = await loadReferences(root, esc);
 const md = new MarkdownIt({html: true, linkify: true, typographer: false}).use(footnote).use(mark).use(sub).use(sup);
 
 // Consume TeX before Markdown processes its underscores, backslashes, and pipes.
@@ -44,21 +46,23 @@ md.renderer.rules.block_anchor=(tokens,i)=>`<span class="block-anchor" id="^${es
 md.renderer.rules.math_inline = (tokens, i) => `<span class="tex${tokens[i].meta.display ? ' display-tex' : ''}">${tokens[i].meta.display ? '\\[' : '\\('}${esc(tokens[i].content)}${tokens[i].meta.display ? '\\]' : '\\)'}</span>`;
 md.block.ruler.before('fence', 'math_block', (state, start, end, silent) => {
   const pos = state.bMarks[start] + state.tShift[start];
+  const environment=state.src.slice(pos).match(/^\\begin\{(equation\*?|align\*?|alignat\*?|gather\*?|multline\*?|flalign\*?|displaymath)\}/);
   const open = state.src.startsWith('$$', pos) ? '$$' : state.src.startsWith('\\[', pos) ? '\\[' : null;
-  if (!open) return false;
-  const close = open === '$$' ? '$$' : '\\]';
-  const finish = state.src.indexOf(close, pos + 2);
+  if (!open&&!environment) return false;
+  const close = environment?`\\end{${environment[1]}}`:open === '$$' ? '$$' : '\\]';
+  const contentStart=environment?pos:pos+open.length;
+  const finish = state.src.indexOf(close, pos + (environment?environment[0].length:open.length));
   if (finish < 0) return false;
   let last = start;
-  while (last < end && state.eMarks[last] < finish + 2) last++;
-  if (last >= end || state.src.slice(finish + 2, state.eMarks[last]).trim()) return false;
+  while (last < end && state.eMarks[last] < finish + close.length) last++;
+  if (last >= end || state.src.slice(finish + close.length, state.eMarks[last]).trim()) return false;
   if (silent) return true;
   const t = state.push('math_block', '', 0);
-  t.block = true; t.content = state.src.slice(pos + 2, finish); t.map = [start, last + 1];
+  t.block = true; t.content = state.src.slice(contentStart,environment?finish+close.length:finish);t.meta={environment:!!environment}; t.map = [start, last + 1];
   state.line = last + 1;
   return true;
 }, {alt: ['paragraph', 'blockquote', 'list']});
-md.renderer.rules.math_block = (tokens, i) => `<div class="math-block">\\[${esc(tokens[i].content)}\\]</div>\n`;
+md.renderer.rules.math_block = (tokens, i) => `<div class="math-block">${tokens[i].meta.environment?esc(tokens[i].content):`\\[${esc(tokens[i].content)}\\]`}</div>\n`;
 md.use(container, 'callout', {
   validate: params => /^(?:info|warning|success|danger|note|tip|\{)/.test(params.trim()),
   render: (tokens, i) => {
@@ -89,18 +93,32 @@ for (const n of notes) {
   const hash = crypto.createHash('sha256').update(raw).digest('hex');
   if (hash !== n.sha256) throw new Error(`Source changed: ${n.title}`);
   n.raw = raw.toString('utf8');
-  n.body = n.raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+  n.body = references.transformBody(n.raw,n.slug).replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+  n.body = n.body.replace(/^(#{1,6}\s+.*?)[ \t]*\(Kevin\)/gm,'$1');
   n.tokens = md.parse(n.body, {});
   const used = new Map(); n.headings = [];
   n.tokens.forEach((t,i) => {
     if (t.type !== 'heading_open') return;
-    const next = n.tokens[i+1]; const text = textOf(next);
+    const next = n.tokens[i+1]; let text = textOf(next);
     let id = slugify(text) || 'section'; const count = used.get(id) || 0; used.set(id,count+1);
     if (count) id += `-${count+1}`;
+    if(t.tag==='h1'&&n.group==='chapters'){
+      n.section=notes.filter(p=>p.group==='chapters').findIndex(p=>p.slug===n.slug);
+      next.content=`Chapter ${n.section}: `+next.content.replace(/^(?:(?:Chapter|Section)\s+\d+[:.]?\s*|\d+[.:]\s*)/i,'');
+      next.children=md.parseInline(next.content,{})[0].children;
+      text=textOf(next);
+    }
     t.attrSet('id',id); n.headings.push({level:Number(t.tag.slice(1)),text,id,html:md.renderInline(next.content)});
   });
   n.heading = n.headings.find(h=>h.level===1)?.text || n.title;
   n.toc = n.headings.filter(h=>h.level===2 || h.level===3);
+  references.linkCitations(n.tokens,n.slug);
+  // Contents labels mirror the displayed headings, including numeric citations.
+  for(let i=0;i<n.tokens.length;i++)if(n.tokens[i].type==='heading_open'){
+    const h=n.headings.find(h=>h.id===n.tokens[i].attrGet('id'));
+    const inline=n.tokens[i+1];
+    h.text=textOf(inline);h.html=md.renderer.renderInline(inline.children,md.options,{}).replace(/<\/?a\b[^>]*>/g,'');
+  }
   report.sourceFiles.push({file:`content/${n.id}.md`,sha256:hash,verified:true});
   for (const m of n.raw.matchAll(/!\[[^\]]*\]\(([^\s)]+)[^)]*\)/g)) {
     if (!assets[m[1]]?.file) report.missingImages.push({page:n.slug,source:m[1]});
@@ -125,16 +143,25 @@ function sectionNav(n,current) {
   return `<li class="chapter ${active?'current':''}"><div class="chapter-row"><a href="${linkFor(n)}"${active?' aria-current="page"':''}>${esc(n.heading)}</a>${children.length ? `<button class="expand" aria-label="${esc('Sections in '+n.heading)}" aria-expanded="${active}"><span></span></button>` : ''}</div>${children.length?`<ul class="subnav"${active?'':' hidden'}>${children.map(h=>`<li><a href="${linkFor(n)}#${h.id}">${h.html}</a></li>`).join('')}</ul>`:''}</li>`;
 }
 function navigation(current) {
-  return `<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 5v22h22M8 22c4-1 6-4 8-8s4-6 9-6"/><circle cx="9" cy="22" r="2"/><circle cx="16" cy="14" r="2"/><circle cx="25" cy="8" r="2"/></svg></span><span>MOO Tutorial</span></a><div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="search" type="search" placeholder="Search tutorial" aria-label="Search tutorial" autocomplete="off"><kbd>/</kbd></div><div id="search-results" aria-live="polite" hidden></div><nav aria-label="Chapters" id="chapter-nav"><div class="nav-label">CONTENTS</div><ul class="chapter-list">${notes.filter(n=>n.group==='chapters').map(n=>sectionNav(n,current)).join('')}</ul><div class="nav-secondary"><a class="${current.slug==='outline'?'selected':''}" href="outline.html">Outline</a><details${current.group==='notes'?' open':''}><summary>Foundation notes</summary><ul>${notes.filter(n=>n.group==='notes').map(n=>`<li><a href="${linkFor(n)}"${n.slug===current.slug?' aria-current="page"':''}>${esc(n.heading)}</a></li>`).join('')}</ul></details></div></nav><div class="sidebar-bottom"><a href="https://hackmd.io/team/moosurvey?nav=overview" target="_blank" rel="noopener">HackMD source</a><span>Multi-objective optimization</span></div>`;
+  return `<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M5 5v22h22M8 22c4-1 6-4 8-8s4-6 9-6"/><circle cx="9" cy="22" r="2"/><circle cx="16" cy="14" r="2"/><circle cx="25" cy="8" r="2"/></svg></span><span>Multi-Objective Optimization Tutorial</span></a><div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="search" type="search" placeholder="Search tutorial" aria-label="Search tutorial" autocomplete="off"><kbd>/</kbd></div><div id="search-results" aria-live="polite" hidden></div><nav aria-label="Chapters" id="chapter-nav"><div class="nav-label">CONTENTS</div><ul class="chapter-list">${notes.filter(n=>n.group==='chapters').map(n=>sectionNav(n,current)).join('')}<li class="chapter ${current.slug==='references'?'current':''}"><div class="chapter-row"><a href="references.html"${current.slug==='references'?' aria-current="page"':''}>References</a></div></li></ul></nav>`;
+}
+function fullTOC(headings) {
+  const tree={level:0,children:[]}, stack=[tree];
+  for(const heading of headings.filter(h=>h.level>1)){
+    while(stack.at(-1).level>=heading.level)stack.pop();
+    const item={...heading,children:[]}; stack.at(-1).children.push(item);stack.push(item);
+  }
+  const list=children=>`<ul>${children.map(h=>`<li><a href="#${h.id}">${h.html.replace(/<\/?a\b[^>]*>/g,'')}</a>${h.children.length?list(h.children):''}</li>`).join('')}</ul>`;
+  return `<details class="inline-toc" open><summary><span>Chapter contents</span><span class="toc-collapse">Collapse</span><span class="toc-expand">Expand</span></summary><nav aria-label="Chapter contents">${list(tree.children)}</nav></details>`;
 }
 function render(n) {
-  const toc = `<nav class="inline-toc" aria-label="Section contents"><ul>${n.toc.filter(h=>h.level===2).map(h=>`<li><a href="#${h.id}">${h.html}</a></li>`).join('')}</ul></nav>`;
-  let html = md.renderer.render(n.tokens,md.options,{}).replace(/<p>\[TOC\]<\/p>/g,toc);
-  const main = notes.filter(n=>n.group==='chapters'); const idx=main.indexOf(n);
+  const toc = fullTOC(n.headings);
+  let html = n.customHTML || md.renderer.render(n.tokens,md.options,{}).replace(/<p>\[TOC\]<\/p>/g,toc);
+  const main = [...notes.filter(n=>n.group==='chapters'),{slug:'references',heading:'References'}]; const idx=main.findIndex(p=>p.slug===n.slug);
   const pages = idx<0 ? '' : `<nav class="page-navigation" aria-label="Adjacent chapters">${idx>0?`<a href="${linkFor(main[idx-1])}"><span>Previous chapter</span><strong>${esc(main[idx-1].heading)}</strong></a>`:'<span></span>'}${idx<main.length-1?`<a href="${linkFor(main[idx+1])}" class="next"><span>Next chapter</span><strong>${esc(main[idx+1].heading)}</strong></a>`:''}</nav>`;
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(n.heading)} | MOO Tutorial</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="theme.css"><script src="math-config.js"></script><script defer src="vendor/mathjax/tex-chtml-full.js"></script><script defer src="vendor/mermaid.min.js"></script><script defer src="search-index.js"></script><script defer src="app.js"></script></head>
-<body data-page="${esc(n.slug)}"><a class="skip-link" href="#main">Skip to content</a><header class="mobile-header"><button id="menu-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html">MOO Tutorial</a></header><div class="mobile-backdrop" hidden></div><aside id="sidebar" class="sidebar">${navigation(n)}</aside><div class="reading-progress" aria-hidden="true"></div><main id="main" class="main"><div class="page-top"><div class="breadcrumb"><a href="index.html">MOO Tutorial</a><span>/</span><span>${n.group==='notes'?'Foundation notes':n.slug==='overview'?'Overview':n.slug==='outline'?'Outline':`Chapter ${idx}`}</span></div><a class="source-link" href="${n.url}" target="_blank" rel="noopener">View source</a></div><article class="article">${html}</article>${pages}<footer class="page-footer"><span>MOO Tutorial</span><a href="#main">Back to top</a></footer></main><aside class="page-toc" aria-label="On this page"><div class="nav-label">ON THIS PAGE</div><nav>${n.toc.map(h=>`<a class="toc-level-${h.level}" href="#${h.id}">${h.html}</a>`).join('')}</nav></aside><div id="image-viewer" role="dialog" aria-modal="true" aria-label="Figure viewer" hidden><button aria-label="Close figure">×</button><img alt=""></div></body></html>`;
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(n.heading)} | Multi-Objective Optimization Tutorial</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="theme.css"><script src="math-config.js"></script><script defer src="vendor/mathjax/tex-chtml-full.js"></script><script defer src="vendor/mermaid.min.js"></script><script defer src="search-index.js"></script><script defer src="app.js"></script></head>
+<body data-page="${esc(n.slug)}"><a class="skip-link" href="#main">Skip to content</a><header class="mobile-header"><button id="menu-toggle" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html">Multi-Objective Optimization Tutorial</a></header><div class="mobile-backdrop" hidden></div><aside id="sidebar" class="sidebar">${navigation(n)}</aside><div class="reading-progress" aria-hidden="true"></div><main id="main" class="main"><div class="page-top"><div class="breadcrumb"><a href="index.html">Multi-Objective Optimization Tutorial</a><span>/</span><span>${n.slug==='overview'?'Overview':n.slug==='references'?'References':n.group==='chapters'?`Chapter ${idx}`:n.heading}</span></div><div class="page-tools"><a class="source-link" href="references.html">References</a></div></div><article class="article">${html}</article>${pages}<footer class="page-footer"><a href="references.html">References</a><a href="#main">Back to top</a></footer></main><aside class="page-toc" aria-label="On this page"><div class="nav-label">ON THIS PAGE</div><nav>${n.toc.map(h=>`<a class="toc-level-${h.level}" href="#${h.id}">${h.html}</a>`).join('')}</nav></aside><div id="image-viewer" role="dialog" aria-modal="true" aria-label="Figure viewer" hidden><button aria-label="Close figure">×</button><img alt=""></div></body></html>`;
 }
 await fs.mkdir(out,{recursive:true});
 for (const file of ['theme.css','app.js','math-config.js','favicon.svg']) await fs.copyFile(path.join(root,file),path.join(out,file));
@@ -157,7 +184,7 @@ for (const n of notes) {
   await fs.writeFile(path.join(out,linkFor(n)),render(n));
   report.pages.push({file:linkFor(n),title:n.heading,headings:n.headings.length});
   // Every result excerpt is copied from the original source.
-  const sections=n.body.split(/(?=^#{1,3} )/m);
+  const sections=n.group==='chapters'?n.body.split(/(?=^#{1,3} )/m):[];
   for (const section of sections) {
     if(!section.trim()) continue;
     const heading=section.match(/^#{1,3}\s+(.+)/)?.[1];
@@ -165,7 +192,13 @@ for (const n of notes) {
     search.push({title:matched?.text||n.heading,chapter:n.heading,url:linkFor(n)+(matched?'#'+matched.id:''),text:section.replace(/<[^>]*>/g,' ').replace(/!\[[^\]]*\]\([^)]*\)/g,' ').replace(/[#*`\[\]]/g,'').replace(/\s+/g,' ').trim()});
   }
 }
+const referencePage={slug:'references',heading:'References',group:'references',url:'https://hackmd.io/team/moosurvey?nav=overview',headings:[],toc:[],customHTML:references.bibliography(notes,linkFor)};
+await fs.writeFile(path.join(out,'references.html'),render(referencePage));
+report.pages.push({file:'references.html',title:'References',headings:1});
+report.references={unique:references.records.length,sourceEntries:references.extracted.entries.length,linkedCitations:references.citationReport.linked.length};
+await fs.writeFile(path.join(root,'references/link-validation.json'),JSON.stringify(references.citationReport,null,2)+'\n');
+for(const r of references.records)search.push({title:r.title,chapter:'References',url:'references.html#'+r.key,text:r.authors.join(', ')+' ('+r.year+'). '+r.title});
 await fs.writeFile(path.join(out,'search-index.js'),'window.MOO_SEARCH='+JSON.stringify(search).replace(/</g,'\\u003c')+';');
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 await fs.writeFile(path.join(root,'validation.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`Built ${notes.length} pages. Verified all ${notes.length} source checksums. ${report.missingImages.length} unresolved image references.`);
+console.log(`Built ${notes.length+1} pages. Verified all ${notes.length} source checksums. ${report.missingImages.length} unresolved image references.`);

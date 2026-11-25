@@ -4,3 +4,24 @@
 @media(max-width:760px){:root{--sidebar:0px;--toc:0px}.mobile-header{display:flex;position:sticky;top:0;z-index:45;align-items:center;gap:15px;background:#ffffffef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:61px;padding:0 20px}.mobile-header>a{font-weight:650;color:var(--ink);font-size:1rem;letter-spacing:-.025em}.mobile-header button{border:0;background:none;width:23px;padding:3px 0;display:grid;gap:5px}.mobile-header button span{height:1.5px;background:#40565d;width:20px;display:block}.sidebar{width:min(320px,86vw);top:61px;transform:translateX(-101%);transition:transform .2s;padding-top:24px}.sidebar.open{transform:translateX(0)}.mobile-backdrop.open{display:block;position:fixed;inset:61px 0 0;background:#17232944;z-index:25}.main{margin:0;padding:25px 23px}.page-top{margin-bottom:30px;font-size:.73rem;gap:15px}.article{font-size:.99rem;line-height:1.8}.article h1{font-size:1.85rem;padding-bottom:22px;margin-bottom:24px}.article h2{font-size:1.45rem}.article h3{font-size:1.18rem}.article .callout{padding:16px}.reading-progress{top:59px;left:0}.page-navigation{gap:12px}.page-navigation a{padding:12px}.page-navigation strong{font-size:.8rem}html{scroll-padding-top:80px}.article h1,.article h2,.article h3{scroll-margin-top:80px}.math-block{max-width:100%;font-size:.94em}.article li{padding-left:0}#image-viewer{padding:50px 12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.sidebar,.page-toc,.mobile-header,.page-top,.page-footer,.page-navigation,.reading-progress{display:none!important}.main{margin:0;padding:0;max-width:none}.article{font-size:11pt}.article h1{font-size:22pt}.article a{color:inherit;border:0}.table-wrap{overflow:visible}.article img{break-inside:avoid}}
+/* Complete chapter outlines and a compact bibliography. */
+.inline-toc ul ul{margin:.3rem 0 .3rem 1.15rem;padding-left:.85rem;border-left:1px solid var(--line)}.inline-toc li{margin:.45rem 0}.inline-toc>ul>li>a{font-weight:600}.page-tools{display:flex;gap:20px;justify-content:flex-end}.reference-summary{margin:1rem 0 2rem}.article .reference-list{list-style:decimal;padding-left:2.5rem;margin:1.5rem 0}.article .reference-list li{padding:0 0 0 .2rem;margin:.8rem 0;line-height:1.65;font-size:1rem;scroll-margin-top:65px}.reference-list li:target{background:#f0f8f7}.reference-entry em{font-style:italic}.citation-todo{color:#bd2525!important;font-weight:700;font-size:.95em}body[data-page=references] .main{max-width:1160px}body[data-page=references] .page-toc{display:none}@media(max-width:760px){.inline-toc{padding:13px}.inline-toc ul ul{margin-left:.5rem;padding-left:.65rem}}
+
+.citation{white-space:nowrap}
+.reference-pending{scroll-margin-top:65px}
+
+/* Keep complete outlines available without making readers scroll past them. */
+.inline-toc>summary{display:flex;align-items:center;gap:1rem;cursor:pointer;list-style:none;color:var(--accent);font-size:.9rem;font-weight:600}
+.inline-toc>summary::-webkit-details-marker{display:none}
+.inline-toc>summary>span:first-child{flex:1}
+.inline-toc>summary:focus-visible{outline:3px solid #43a8a3;outline-offset:5px}
+.inline-toc[open]>summary{padding-bottom:.8rem;margin-bottom:.8rem;border-bottom:1px solid var(--line)}
+.inline-toc[open] .toc-expand,.inline-toc:not([open]) .toc-collapse{display:none}
+/* Overflow belongs to the equation or table, not the entire page. */
+.main,.article,.callout{min-width:0}
+.tex{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle}
+.display-tex{display:block}
+.math-block,.display-tex,.table-wrap,.article pre{max-width:100%;overscroll-behavior-x:contain}
+.math-block>mjx-container[jax=CHTML][display=true],.display-tex>mjx-container[jax=CHTML][display=true]{min-width:min-content}
+.mobile-header button{flex-shrink:0}
+@media(max-width:760px){.page-top,.breadcrumb{flex-wrap:wrap}.breadcrumb{gap:6px}.mobile-header>a{line-height:1.25}.article .callout{max-width:100%}.page-tools{margin-left:auto}}
