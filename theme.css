@@ -8,6 +8,13 @@
 .inline-toc ul ul{margin:.3rem 0 .3rem 1.15rem;padding-left:.85rem;border-left:1px solid var(--line)}.inline-toc li{margin:.45rem 0}.inline-toc>ul>li>a{font-weight:600}.page-tools{display:flex;gap:20px;justify-content:flex-end}.reference-summary{margin:1rem 0 2rem}.article .reference-list{list-style:decimal;padding-left:2.5rem;margin:1.5rem 0}.article .reference-list li{padding:0 0 0 .2rem;margin:.8rem 0;line-height:1.65;font-size:1rem;scroll-margin-top:65px}.reference-list li:target{background:#f0f8f7}.reference-entry em{font-style:italic}.citation-todo{color:#bd2525!important;font-weight:700;font-size:.95em}body[data-page=references] .main{max-width:1160px}body[data-page=references] .page-toc{display:none}@media(max-width:760px){.inline-toc{padding:13px}.inline-toc ul ul{margin-left:.5rem;padding-left:.65rem}}
 
 .citation{white-space:nowrap}
+.tutorial-authors{margin:0 0 34px;padding:0 0 24px;border-bottom:1px solid var(--line);line-height:1.8}
+.tutorial-authors p{margin:0 0 6px}
+.tutorial-authors .authors-label{color:var(--muted);font-size:.85rem;margin-bottom:9px}
+.author-list{font-size:1rem}
+.author-name{white-space:nowrap}
+.author-name sup{color:var(--accent);font-size:.75em;margin-left:1px}
+.tutorial-authors .authors-note{color:var(--muted);font-size:.82rem;margin-top:10px;margin-bottom:0}
 .reference-pending{scroll-margin-top:65px}
 
 /* Keep complete outlines available without making readers scroll past them. */

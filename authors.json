@@ -1,0 +1,9 @@
+{
+  "students": ["Peiyao Xiao", "Zhen Qin", "Zhiyao Zhang", "Liuyuan Jiang"],
+  "otherAuthors": ["Lisha Chen", "Tianyi Chen", "Kaiyi Ji", "Chaosheng Dong"],
+  "lastAuthor": "Jia Liu",
+  "equalContributionNote": "Equal contribution.",
+  "nameSources": {
+    "Liuyuan Jiang": "https://lisha-chen.github.io/www/group.html"
+  }
+}
