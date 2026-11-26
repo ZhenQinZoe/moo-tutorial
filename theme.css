@@ -11,10 +11,14 @@
 .tutorial-authors{margin:0 0 34px;padding:0 0 24px;border-bottom:1px solid var(--line);line-height:1.8}
 .tutorial-authors p{margin:0 0 6px}
 .tutorial-authors .authors-label{color:var(--muted);font-size:.85rem;margin-bottom:9px}
-.author-list{font-size:1rem}
-.author-name{white-space:nowrap}
+.author-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:0 0 22px;padding:0;font-size:.88rem;line-height:1.4}
+.author-card{width:calc((100% - 64px)/5);max-width:132px;min-width:0;text-align:center}
+.author-card>a{display:flex;flex-direction:column;align-items:center;gap:9px}
+.author-photo{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center;background:#f1f4f4;border-radius:0}
+.author-name{display:block;overflow-wrap:normal}
 .author-name sup{color:var(--accent);font-size:.75em;margin-left:1px}
 .tutorial-authors .authors-note{color:var(--muted);font-size:.82rem;margin-top:10px;margin-bottom:0}
+@media(max-width:600px){.author-list{gap:18px 16px;font-size:.84rem}.author-card{width:calc((100% - 32px)/3);max-width:132px}}
 .reference-pending{scroll-margin-top:65px}
 
 /* Keep complete outlines available without making readers scroll past them. */

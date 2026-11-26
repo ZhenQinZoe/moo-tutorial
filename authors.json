@@ -1,6 +1,16 @@
 {
-  "students": ["Peiyao Xiao", "Zhen Qin", "Zhiyao Zhang", "Liuyuan Jiang"],
-  "otherAuthors": ["Lisha Chen", "Tianyi Chen", "Kaiyi Ji", "Chaosheng Dong"],
+  "students": [
+    "Peiyao Xiao",
+    "Zhen Qin",
+    "Zhiyao Zhang",
+    "Liuyuan Jiang"
+  ],
+  "otherAuthors": [
+    "Lisha Chen",
+    "Tianyi Chen",
+    "Kaiyi Ji",
+    "Chaosheng Dong"
+  ],
   "lastAuthor": "Jia Liu",
   "equalContributionNote": "Equal contribution.",
   "homepages": {
@@ -16,5 +26,61 @@
   },
   "nameSources": {
     "Liuyuan Jiang": "https://lisha-chen.github.io/www/group.html"
+  },
+  "photos": {
+    "Liuyuan Jiang": {
+      "file": "assets/authors/liuyuan-jiang.jpg",
+      "sourcePage": "https://liuyuan999.github.io/",
+      "sourceImage": "https://liuyuan999.github.io/images/LiuyuanJiang_homepic.jpg",
+      "position": "50% 50%"
+    },
+    "Zhen Qin": {
+      "file": "assets/authors/zhen-qin.jpg",
+      "sourcePage": "https://zhenqinzoe.github.io/",
+      "sourceImage": "https://zhenqinzoe.github.io/profile.jpg",
+      "position": "50% 50%"
+    },
+    "Peiyao Xiao": {
+      "file": "assets/authors/peiyao-xiao.png",
+      "sourcePage": "https://xiaopeiyao.github.io/",
+      "sourceImage": "https://xiaopeiyao.github.io/bio.png",
+      "position": "50% 25%"
+    },
+    "Zhiyao Zhang": {
+      "file": "assets/authors/zhiyao-zhang.png",
+      "sourcePage": "https://cosmic-building-002.notion.site/Zhiyao-Zhang-s-Homepage-1f9c6c88640480d78931ddf34958568f",
+      "sourceImage": "https://cosmic-building-002.notion.site/image/attachment%3Ad6dd8aba-d226-4fe6-8b96-f01a5fac6ad8%3A0da4fcfb-9766-4277-ae25-f1efda5fe07d.png?table=block&id=23fc6c88-6404-80de-adcc-cf7b8ec55189&spaceId=02bb2539-eb11-44f5-9eb8-e8d0c38eed9a&width=440&userId=&cache=v2&imgBuildSrc=requestProxiedImageUrl",
+      "position": "50% 50%"
+    },
+    "Lisha Chen": {
+      "file": "assets/authors/lisha-chen.jpg",
+      "sourcePage": "https://lisha-chen.github.io/www/index.html",
+      "sourceImage": "https://lisha-chen.github.io/www/figures/photos/100723_6_cut.jpg",
+      "position": "50% 50%"
+    },
+    "Tianyi Chen": {
+      "file": "assets/authors/tianyi-chen.jpeg",
+      "sourcePage": "https://chen.tech.cornell.edu/index.html",
+      "sourceImage": "https://chen.tech.cornell.edu/assets/profile-pics/TianyiChen_small.jpeg",
+      "position": "50% 15%"
+    },
+    "Chaosheng Dong": {
+      "file": "assets/authors/chaosheng-dong.jpg",
+      "sourcePage": "https://chaoshengdong.github.io/",
+      "sourceImage": "https://chaoshengdong.github.io/chaosheng.jpg",
+      "position": "50% 50%"
+    },
+    "Kaiyi Ji": {
+      "file": "assets/authors/kaiyi-ji.jpeg",
+      "sourcePage": "https://jikaiyi.github.io/",
+      "sourceImage": "https://jikaiyi.github.io/assets/profile-pics/kaiyi.jpeg",
+      "position": "50% 50%"
+    },
+    "Jia Liu": {
+      "file": "assets/authors/jia-liu.jpg",
+      "sourcePage": "https://kevinliu-osu.github.io/",
+      "sourceImage": "https://kevinliu-osu.github.io/images/kevin_web.jpg",
+      "position": "50% 25%"
+    }
   }
 }
