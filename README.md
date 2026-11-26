@@ -26,7 +26,7 @@ The primary navigation uses Chapter 0–5, followed by the standalone, unnumbere
 
 ## Sharing
 
-The author portraits in `assets/authors/` are original downloads from the authors' official homepages, except Zhiyao Zhang's replacement photograph supplied by the user. `authors.json` records each source and display crop. Lisha Chen uses the formal portrait selected by the user. CSS frames use direct square crops centered on each author's head within the original image bounds, preserving the image's aspect ratio without padding or blurred backgrounds. The student-first surname order, equal-contribution marks, and Jia Liu's final position are preserved.
+The author portraits in `assets/authors/` are original downloads from the authors' official homepages, except Zhiyao Zhang's replacement photograph supplied by the user. `authors.json` records each source and display crop. Lisha Chen uses the formal portrait selected by the user. CSS frames use direct square crops centered on each author's head within the original image bounds, preserving the image's aspect ratio without padding or blurred backgrounds. The student-first surname order, equal-contribution marks, and Jia Liu's final position are preserved. The Overview masthead displays the full official tutorial title above the authors. Each author card includes a title and affiliation; `authors.json` records the official homepage sources and verification date, with student titles set to PhD Candidate as requested.
 
 The `dist/` directory is the complete website. It includes its math, diagram, and search libraries and can be shared as a ZIP or uploaded to any static host, including GitHub Pages. Extract the ZIP before opening `index.html`. A localhost address cannot be accessed by other people.
 

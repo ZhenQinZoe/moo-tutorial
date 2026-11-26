@@ -136,5 +136,65 @@
       }
     }
   },
-  "portraitFraming": "Direct square crops centered on the head within the original image bounds; no padding or generated background."
+  "portraitFraming": "Direct square crops centered on the head within the original image bounds; no padding or generated background.",
+  "profiles": {
+    "Liuyuan Jiang": {
+      "title": "PhD Candidate",
+      "affiliation": "University of Rochester",
+      "source": "https://liuyuan999.github.io/",
+      "verifiedOn": "2026-11-25",
+      "titleSource": "User requested PhD Candidate for all student authors."
+    },
+    "Zhen Qin": {
+      "title": "PhD Candidate",
+      "affiliation": "The Ohio State University",
+      "source": "https://zhenqinzoe.github.io/",
+      "verifiedOn": "2026-11-25",
+      "titleSource": "User requested PhD Candidate for all student authors."
+    },
+    "Peiyao Xiao": {
+      "title": "PhD Candidate",
+      "affiliation": "University at Buffalo, SUNY",
+      "source": "https://xiaopeiyao.github.io/",
+      "verifiedOn": "2026-11-25",
+      "titleSource": "User requested PhD Candidate for all student authors."
+    },
+    "Zhiyao Zhang": {
+      "title": "PhD Candidate",
+      "affiliation": "The Ohio State University",
+      "source": "https://zhiyao-osu.github.io/",
+      "verifiedOn": "2026-11-25",
+      "titleSource": "User requested PhD Candidate for all student authors."
+    },
+    "Lisha Chen": {
+      "title": "Assistant Professor",
+      "affiliation": "University of Rochester",
+      "source": "https://lisha-chen.github.io/www/index.html",
+      "verifiedOn": "2026-11-25"
+    },
+    "Tianyi Chen": {
+      "title": "Associate Professor",
+      "affiliation": "Cornell Tech and Cornell University",
+      "source": "https://chen.tech.cornell.edu/index.html",
+      "verifiedOn": "2026-11-25"
+    },
+    "Chaosheng Dong": {
+      "title": "Engineering Manager, Machine Learning",
+      "affiliation": "Pinterest",
+      "source": "https://chaoshengdong.github.io/",
+      "verifiedOn": "2026-11-25"
+    },
+    "Kaiyi Ji": {
+      "title": "Assistant Professor",
+      "affiliation": "University at Buffalo, SUNY",
+      "source": "https://jikaiyi.github.io/",
+      "verifiedOn": "2026-11-25"
+    },
+    "Jia Liu": {
+      "title": "Associate Professor",
+      "affiliation": "The Ohio State University",
+      "source": "https://kevinliu-osu.github.io/",
+      "verifiedOn": "2026-11-25"
+    }
+  }
 }
