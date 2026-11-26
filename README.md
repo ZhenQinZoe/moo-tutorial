@@ -1,4 +1,4 @@
-# Multi-Objective Optimization Tutorial
+# Multi-Objective Optimization for Modern Machine Learning: Foundations, Recent Advances, and Emerging Applications
 
 A self-contained static tutorial website prepared from the supplied HackMD workspace. The site can be previewed locally or published with the included GitHub Pages workflow.
 
@@ -22,7 +22,7 @@ At the user's request, local Reference/References headings and blocks are remove
 
 `references/AUDIT.md` documents the bibliographic check and its limitations. This is an existence/metadata check, not a scientific claim-by-claim or proof audit. `references/site-validation.json` records the source checksums and interface/link checks. Earlier browser checks are retained as historical validation; the latest citation-display check is `references/narrative-citation-validation.json`; the section/navigation check is `references/numbered-ui-validation.json`.
 
-The primary navigation uses Chapter 0–5, followed by the standalone, unnumbered **References** section immediately after Chapter 5: Applications. The site name is **Multi-Objective Optimization Tutorial**. Outline, Foundation notes, View source, and HackMD footer controls are removed from the interface. Auxiliary source pages remain available for existing internal links but are not promoted in navigation or search. References use a compact numbered list with one original-paper link per entry. The default HackMD team welcome note is service boilerplate and is not part of the tutorial.
+The primary navigation uses Chapter 0–5, followed by the standalone, unnumbered **References** section immediately after Chapter 5: Applications. The site name is **Multi-Objective Optimization for Modern Machine Learning: Foundations, Recent Advances, and Emerging Applications**. Outline, Foundation notes, View source, and HackMD footer controls are removed from the interface. Auxiliary source pages remain available for existing internal links but are not promoted in navigation or search. References use a compact numbered list with one original-paper link per entry. The default HackMD team welcome note is service boilerplate and is not part of the tutorial.
 
 ## Sharing
 

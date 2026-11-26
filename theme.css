@@ -31,4 +31,9 @@
 .math-block,.display-tex,.table-wrap,.article pre{max-width:100%;overscroll-behavior-x:contain}
 .math-block>mjx-container[jax=CHTML][display=true],.display-tex>mjx-container[jax=CHTML][display=true]{min-width:min-content}
 .mobile-header button{flex-shrink:0}
+.brand{align-items:flex-start;font-size:1.05rem;line-height:1.35;letter-spacing:-.025em}
+.brand-mark{margin-top:2px}
+.breadcrumb{min-width:0;flex-wrap:wrap}
+.breadcrumb>a{min-width:0;max-width:100%}
+@media(max-width:760px){.mobile-header{height:auto;min-height:61px;padding:12px 20px}.mobile-header>a{min-width:0;font-size:.9rem}.sidebar{top:var(--mobile-header-height,61px)}.mobile-backdrop.open{inset:var(--mobile-header-height,61px) 0 0}.reading-progress{top:calc(var(--mobile-header-height,61px) - 2px)}html{scroll-padding-top:calc(var(--mobile-header-height,61px) + 19px)}.article h1,.article h2,.article h3,.article h4{scroll-margin-top:calc(var(--mobile-header-height,61px) + 19px)}}
 @media(max-width:760px){.page-top,.breadcrumb{flex-wrap:wrap}.breadcrumb{gap:6px}.mobile-header>a{line-height:1.25}.article .callout{max-width:100%}.page-tools{margin-left:auto}}

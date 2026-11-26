@@ -1,6 +1,14 @@
 (() => {
   const $ = s => document.querySelector(s);
   const $$ = s => [...document.querySelectorAll(s)];
+  const mobileHeader=$('.mobile-header');
+  const syncHeaderHeight=()=>{
+    const height=mobileHeader.getBoundingClientRect().height;
+    if(height)document.documentElement.style.setProperty('--mobile-header-height',`${Math.ceil(height)}px`);
+    else document.documentElement.style.removeProperty('--mobile-header-height');
+  };
+  new ResizeObserver(syncHeaderHeight).observe(mobileHeader);
+  syncHeaderHeight();
   const followOldReference = () => {
     const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if(target?.dataset.referenceTarget)location.replace(target.dataset.referenceTarget);
