@@ -33,26 +33,24 @@
       "sourcePage": "https://liuyuan999.github.io/",
       "sourceImage": "https://liuyuan999.github.io/images/LiuyuanJiang_homepic.jpg",
       "crop": {
-        "x": 47.53,
-        "y": 17.35,
+        "x": 37.06,
+        "y": 0,
         "size": 848.94,
         "sourceWidth": 886,
         "sourceHeight": 886
-      },
-      "background": "#938c84"
+      }
     },
     "Zhen Qin": {
       "file": "assets/authors/zhen-qin.jpg",
       "sourcePage": "https://zhenqinzoe.github.io/",
       "sourceImage": "https://zhenqinzoe.github.io/profile.jpg",
       "crop": {
-        "x": 0.0,
-        "y": 0.0,
+        "x": 0,
+        "y": 0,
         "size": 640.0,
         "sourceWidth": 640,
         "sourceHeight": 640
-      },
-      "background": "#abb1b1"
+      }
     },
     "Peiyao Xiao": {
       "file": "assets/authors/peiyao-xiao.png",
@@ -60,63 +58,58 @@
       "sourceImage": "https://xiaopeiyao.github.io/bio.png",
       "crop": {
         "x": 116.59,
-        "y": 140.06,
+        "y": 73.59,
         "size": 850.82,
         "sourceWidth": 1024,
         "sourceHeight": 1536
-      },
-      "background": "#222126"
+      }
     },
     "Zhiyao Zhang": {
       "file": "assets/authors/zhiyao-zhang.jpg",
       "source": "User-provided photograph on 2026-11-25",
       "crop": {
-        "x": 1200.65,
-        "y": 2037.76,
+        "x": 1200.64,
+        "y": 1938.64,
         "size": 1268.71,
         "sourceWidth": 3072,
         "sourceHeight": 4080
-      },
-      "background": "#70614c"
+      }
     },
     "Lisha Chen": {
       "file": "assets/authors/lisha-chen.jpg",
       "sourcePage": "https://lisha-chen.github.io/www/index.html",
       "sourceImage": "https://lisha-chen.github.io/www/figures/photos/100723_6_cut.jpg",
       "crop": {
-        "x": -74.18,
-        "y": 18.88,
-        "size": 570.35,
+        "x": 0,
+        "y": 47.0,
+        "size": 425,
         "sourceWidth": 425,
         "sourceHeight": 605
-      },
-      "background": "#d0d1cb"
+      }
     },
     "Tianyi Chen": {
       "file": "assets/authors/tianyi-chen.jpeg",
       "sourcePage": "https://chen.tech.cornell.edu/index.html",
       "sourceImage": "https://chen.tech.cornell.edu/assets/profile-pics/TianyiChen_small.jpeg",
       "crop": {
-        "x": -141.76,
-        "y": -101.18,
-        "size": 903.53,
+        "x": 0,
+        "y": 0,
+        "size": 591,
         "sourceWidth": 591,
         "sourceHeight": 800
-      },
-      "background": "#43484e"
+      }
     },
     "Chaosheng Dong": {
       "file": "assets/authors/chaosheng-dong.jpg",
       "sourcePage": "https://chaoshengdong.github.io/",
       "sourceImage": "https://chaoshengdong.github.io/chaosheng.jpg",
       "crop": {
-        "x": -54.47,
-        "y": -36.65,
-        "size": 560.94,
+        "x": 0,
+        "y": 0,
+        "size": 500,
         "sourceWidth": 500,
         "sourceHeight": 544
-      },
-      "background": "#565b6e"
+      }
     },
     "Kaiyi Ji": {
       "file": "assets/authors/kaiyi-ji.jpeg",
@@ -124,30 +117,24 @@
       "sourceImage": "https://jikaiyi.github.io/assets/profile-pics/kaiyi.jpeg",
       "crop": {
         "x": 303.24,
-        "y": 358.82,
+        "y": 200.74,
         "size": 2023.53,
         "sourceWidth": 3024,
         "sourceHeight": 4032
-      },
-      "background": "#cfbc9e"
+      }
     },
     "Jia Liu": {
       "file": "assets/authors/jia-liu.jpg",
       "sourcePage": "https://kevinliu-osu.github.io/",
       "sourceImage": "https://kevinliu-osu.github.io/images/kevin_web.jpg",
       "crop": {
-        "x": -26.12,
-        "y": -9.41,
-        "size": 572.24,
+        "x": 0,
+        "y": 0,
+        "size": 480,
         "sourceWidth": 480,
         "sourceHeight": 720
-      },
-      "background": "#736c66"
+      }
     }
   },
-  "portraitReference": {
-    "author": "Zhen Qin",
-    "headHeightFraction": 0.53125,
-    "headTopFraction": 0.15625
-  }
+  "portraitFraming": "Direct square crops centered on the head within the original image bounds; no padding or generated background."
 }
