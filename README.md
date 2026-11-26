@@ -26,7 +26,7 @@ The primary navigation uses Chapter 0–5, followed by the standalone, unnumbere
 
 ## Sharing
 
-The author portraits in `assets/authors/` are original downloads from the authors' official homepages. `authors.json` records each image URL, source page, and display crop. Lisha Chen uses the formal portrait selected by the user; Zhiyao Zhang's image comes from his linked former official homepage. Square crops are applied in CSS, without changing the original image files. The student-first surname order, equal-contribution marks, and Jia Liu's final position are preserved.
+The author portraits in `assets/authors/` are original downloads from the authors' official homepages, except Zhiyao Zhang's replacement photograph supplied by the user. `authors.json` records each source and display crop. Lisha Chen uses the formal portrait selected by the user. CSS frames match head size and placement to Zhen Qin's portrait while preserving each original image's aspect ratio. Close portraits use a softened copy of their own background where the square frame extends beyond the original photograph. The student-first surname order, equal-contribution marks, and Jia Liu's final position are preserved.
 
 The `dist/` directory is the complete website. It includes its math, diagram, and search libraries and can be shared as a ZIP or uploaded to any static host, including GitHub Pages. Extract the ZIP before opening `index.html`. A localhost address cannot be accessed by other people.
 

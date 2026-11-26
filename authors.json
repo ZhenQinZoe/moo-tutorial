@@ -32,55 +32,122 @@
       "file": "assets/authors/liuyuan-jiang.jpg",
       "sourcePage": "https://liuyuan999.github.io/",
       "sourceImage": "https://liuyuan999.github.io/images/LiuyuanJiang_homepic.jpg",
-      "position": "50% 50%"
+      "crop": {
+        "x": 47.53,
+        "y": 17.35,
+        "size": 848.94,
+        "sourceWidth": 886,
+        "sourceHeight": 886
+      },
+      "background": "#938c84"
     },
     "Zhen Qin": {
       "file": "assets/authors/zhen-qin.jpg",
       "sourcePage": "https://zhenqinzoe.github.io/",
       "sourceImage": "https://zhenqinzoe.github.io/profile.jpg",
-      "position": "50% 50%"
+      "crop": {
+        "x": 0.0,
+        "y": 0.0,
+        "size": 640.0,
+        "sourceWidth": 640,
+        "sourceHeight": 640
+      },
+      "background": "#abb1b1"
     },
     "Peiyao Xiao": {
       "file": "assets/authors/peiyao-xiao.png",
       "sourcePage": "https://xiaopeiyao.github.io/",
       "sourceImage": "https://xiaopeiyao.github.io/bio.png",
-      "position": "50% 25%"
+      "crop": {
+        "x": 116.59,
+        "y": 140.06,
+        "size": 850.82,
+        "sourceWidth": 1024,
+        "sourceHeight": 1536
+      },
+      "background": "#222126"
     },
     "Zhiyao Zhang": {
-      "file": "assets/authors/zhiyao-zhang.png",
-      "sourcePage": "https://cosmic-building-002.notion.site/Zhiyao-Zhang-s-Homepage-1f9c6c88640480d78931ddf34958568f",
-      "sourceImage": "https://cosmic-building-002.notion.site/image/attachment%3Ad6dd8aba-d226-4fe6-8b96-f01a5fac6ad8%3A0da4fcfb-9766-4277-ae25-f1efda5fe07d.png?table=block&id=23fc6c88-6404-80de-adcc-cf7b8ec55189&spaceId=02bb2539-eb11-44f5-9eb8-e8d0c38eed9a&width=440&userId=&cache=v2&imgBuildSrc=requestProxiedImageUrl",
-      "position": "50% 50%"
+      "file": "assets/authors/zhiyao-zhang.jpg",
+      "source": "User-provided photograph on 2026-11-25",
+      "crop": {
+        "x": 1200.65,
+        "y": 2037.76,
+        "size": 1268.71,
+        "sourceWidth": 3072,
+        "sourceHeight": 4080
+      },
+      "background": "#70614c"
     },
     "Lisha Chen": {
       "file": "assets/authors/lisha-chen.jpg",
       "sourcePage": "https://lisha-chen.github.io/www/index.html",
       "sourceImage": "https://lisha-chen.github.io/www/figures/photos/100723_6_cut.jpg",
-      "position": "50% 50%"
+      "crop": {
+        "x": -74.18,
+        "y": 18.88,
+        "size": 570.35,
+        "sourceWidth": 425,
+        "sourceHeight": 605
+      },
+      "background": "#d0d1cb"
     },
     "Tianyi Chen": {
       "file": "assets/authors/tianyi-chen.jpeg",
       "sourcePage": "https://chen.tech.cornell.edu/index.html",
       "sourceImage": "https://chen.tech.cornell.edu/assets/profile-pics/TianyiChen_small.jpeg",
-      "position": "50% 15%"
+      "crop": {
+        "x": -141.76,
+        "y": -101.18,
+        "size": 903.53,
+        "sourceWidth": 591,
+        "sourceHeight": 800
+      },
+      "background": "#43484e"
     },
     "Chaosheng Dong": {
       "file": "assets/authors/chaosheng-dong.jpg",
       "sourcePage": "https://chaoshengdong.github.io/",
       "sourceImage": "https://chaoshengdong.github.io/chaosheng.jpg",
-      "position": "50% 50%"
+      "crop": {
+        "x": -54.47,
+        "y": -36.65,
+        "size": 560.94,
+        "sourceWidth": 500,
+        "sourceHeight": 544
+      },
+      "background": "#565b6e"
     },
     "Kaiyi Ji": {
       "file": "assets/authors/kaiyi-ji.jpeg",
       "sourcePage": "https://jikaiyi.github.io/",
       "sourceImage": "https://jikaiyi.github.io/assets/profile-pics/kaiyi.jpeg",
-      "position": "50% 50%"
+      "crop": {
+        "x": 303.24,
+        "y": 358.82,
+        "size": 2023.53,
+        "sourceWidth": 3024,
+        "sourceHeight": 4032
+      },
+      "background": "#cfbc9e"
     },
     "Jia Liu": {
       "file": "assets/authors/jia-liu.jpg",
       "sourcePage": "https://kevinliu-osu.github.io/",
       "sourceImage": "https://kevinliu-osu.github.io/images/kevin_web.jpg",
-      "position": "50% 25%"
+      "crop": {
+        "x": -26.12,
+        "y": -9.41,
+        "size": 572.24,
+        "sourceWidth": 480,
+        "sourceHeight": 720
+      },
+      "background": "#736c66"
     }
+  },
+  "portraitReference": {
+    "author": "Zhen Qin",
+    "headHeightFraction": 0.53125,
+    "headTopFraction": 0.15625
   }
 }
